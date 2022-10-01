@@ -20,3 +20,73 @@ print(A*B)
 # 6번
 A, B = map(int, input().split())
 print(A/B)
+
+# 7번
+A, B = map(int, input().split())
+print(A+B)
+print(A-B)
+print(A*B)
+print(int(A/B))
+print(A%B)
+
+# 8번
+a = input()
+print(a + "??!")
+
+# 9번
+a = int(input())
+print(a - 543)
+
+# 10번
+Discover = list(map(int, input().split()))
+
+Discover[0] = 1 - Discover[0]
+Discover[1] = 1 - Discover[1]
+Discover[2] = 2 - Discover[2]
+Discover[3] = 2 - Discover[3]
+Discover[4] = 2 - Discover[4]
+Discover[5] = 8 - Discover[5]
+
+for i in range(0, len(Discover), 1):
+    print(Discover[i], end = ' ')
+
+# 11번
+A, B, C = map(int, input().split())
+print((A+B)%C)
+print(((A%C)+(B%C))%C)
+print((A*B)%C)
+print(((A%C)*(B%C))%C)
+
+# 12번
+A = int(input())
+B = list(map(int, input()))
+C = 1
+total = 0
+
+for i in range(len(B)-1, -1, -1):
+    print(A * B[i])
+    total = total + (A*(B[i] * C))
+    C *= 10
+    
+print(total)
+
+# 13번
+print("\\    /\\")
+print(" )  ( ')")
+print("(  /  )")
+print(" \\(__)|")
+
+# 14번
+print("|\\_/|")
+print("|q p|   /}")
+print('( 0 )"""\\')
+print('|"^"`    |')
+print("||_/=\\\__|")
+
+# 15
+print("         ,r\'\"7")
+print("r`-_   ,'  ,/")
+print(" \. \". L_r'")
+print("   `~\/")
+print("      |")
+print("      |")
