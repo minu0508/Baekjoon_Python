@@ -1,0 +1,103 @@
+# 1번 문제
+A, B = map(int, input().split())
+if A > B:
+    print(">")
+elif A < B:
+    print("<")
+else:
+    print("==")
+    
+# 2번 문제
+a = int(input())
+if 90 <= a <= 100:
+    print("A")
+elif 80 <= a <= 89:
+    print("B")
+elif 70 <= a <= 79:
+    print("C")
+elif 60 <= a <= 69:
+    print("D")
+else:
+    print("F")
+
+# 3번 문제
+a = int(input())
+
+if (a%4 == 0 and a%100 != 0):
+    print("1")
+elif (a%400 == 0):
+    print("1")
+else:
+    print("0")
+
+# 4번 문제
+x = int(input())
+y = int(input())
+
+if (x < 0 and y < 0):
+    print("3")
+elif (x < 0 and y > 0):
+    print("2")
+elif (x > 0 and y < 0):
+    print("4")
+else:
+    print("1")
+    
+# 5번 문제
+h, m = map(int, input().split())
+sec = 45
+
+if (m < 45):
+    h -= 1
+    if(h < 0):
+        h = 23
+        sec -= m
+        m = 60 - sec
+        print("%d %d" % (h, m))
+    elif(h >= 0):
+        sec -= m
+        m = 60 - sec
+        print("%d %d" % (h, m))
+    
+else:
+    m -= 45
+    print("%d %d" % (h, m))
+
+# 6번 문제
+A, B = map(int, input().split())
+C = int(input())
+H = 0
+M = 0
+
+if (A < 24):
+    if (B+C >= 60):
+        H = int((B+C)/60)
+        M = int((B+C)%60)
+        if (A+H >= 24):
+            A = (A+H)-24
+            print("%d %d" %(A, M))
+        else:
+            A += H
+            print("%d %d" %(A, M))
+    
+    elif(B+C < 60):
+        M = B+C
+        print("%d %d" %(A, M))
+
+# 7번 문제
+A, B, C = map(int, input().split())
+M = 0
+
+if (A == B == C):
+    M = 10000 + A*1000
+    print(M)
+
+elif (A == B != C or A != B == C or A == C != B):
+    if (A==B or A==C):
+        M = 1000+(A*100)
+    elif (B==C):
+        M = 1000+(B*100)
+    print(M)
+
+else:
+    print(max(A, B, C)*100)
