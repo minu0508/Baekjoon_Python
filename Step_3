@@ -1,0 +1,147 @@
+# 01번 문제
+a = int(input())
+
+for i in range(1, 10, 1):
+    print("%d * %d = %d" %(a, i, a*i) )
+    
+# 02번 문제
+a = int(input())
+d = []
+for i in range(0, a, 1):
+    b, c = map(int, input().split())
+    d.append(b+c)
+    
+for j in range(0, a, 1):
+    print(d[j])
+
+# 03번 문제
+a = int(input())
+d = []
+for i in range(0, a, 1):
+    b, c = map(int, input().split())
+    d.append(b+c)
+    
+for j in range(0, a, 1):
+    print(d[j])
+
+# 04번 문제
+Total = int(input())
+Item = int(input())
+Price = 0
+
+for i in range(0, Item, 1):
+    Pay = list(map(int, input().split()))
+
+    Price += (Pay[0] * Pay[1])
+
+if (Total == Price):
+    print("Yes")
+else:
+    print("No")
+
+# 05번 문제
+import sys
+a = int(input())
+
+for _ in range(0, a, 1):
+    b, c = map(int, sys.stdin.readline().split())
+    print(b+c)
+
+# 06번 문제
+T = int(input())
+D = [0]
+
+for _ in range(0, T, 1):
+    A, B = map(int, input().split())
+    D.append(A+B)
+    
+for i in range(1, (T+1), 1):
+    print("Case #%d: %d" %(i, D[i]))
+
+# 07번 문제
+T = int(input())
+D = [0]
+E = [0]
+F = [0]
+
+for _ in range(0, T, 1):
+    A, B = map(int, input().split())
+    E.append(A)
+    F.append(B)
+    D.append(A+B)
+     
+for i in range(1, (T+1), 1):
+    print("Case #%d: %d + %d = %d" %(i, E[i], F[i], D[i]))
+
+# 08번 문제
+a = int(input())
+
+for i in range(1, a+1, 1):
+    print("*" * i)
+
+# 09번 문제
+a = int(input())
+
+for i in range(1, a+1, 1):
+    print(" "*(a-i) + "*" * i)
+
+# 10번 문제
+a, b = map(int, input().split())
+c = list(map(int, input().split()))
+d = []
+
+if len(c) == a:
+    for i in range(0, a, 1):
+        if (b > c[i]):
+            d.append(c[i])          
+else:
+    print("N의 길이와 수열의 개수가 맞지 않으니 다시 시작하세요.")
+
+for j in range(0, len(d), 1):
+    print(d[j], end = ' ')
+
+# 11번 문제
+c = []
+
+while True:
+    a, b = map(int, input().split())
+    c.append(a+b)
+
+    if ( a==0 and b==0):
+        break
+
+for i in range(0, len(c)-1, 1):
+    print(c[i])
+
+# 12번 문제
+while True:
+    try:
+        a, b = map(int, input().split())
+        print(a+b)
+    except:
+        break
+
+# 13번 문제
+a = list(map(int, input()))
+if (a[0] < 10):
+    a.append(0)
+c = a[0]
+d = a[1]
+e = 0
+save = 0
+
+while True:
+    save = a[1]
+    
+    if (a[0]+a[1] >= 10):
+        a[1] = (a[0]+a[1]) - 10
+    else:
+        a[1] = a[0]+a[1]
+        
+    a[0] = save
+
+    e += 1
+
+    if (save== c and a[1] == d):
+        print(e)
+        brea
